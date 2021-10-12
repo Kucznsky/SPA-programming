@@ -1,1 +1,1 @@
-# SPA-programming
+Tasks related to React, Angular and overall front-end development.
