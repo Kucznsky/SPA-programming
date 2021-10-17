@@ -6,7 +6,7 @@
         <script src="logic.js"></script>
     </head>
     <body>
-        <div>
+        <div id="calculator" style="display: block">
             <input id="first" type="number">
             <div id="symbol"></div>
             <input id="second" type="number">
@@ -16,7 +16,20 @@
             <button type="button" onclick="Multiplication()">*</button>
             <button type="button" onclick="Division()">/<button>
             <button type="button" onclick="Exponentiation()">X^<button></button>
-            <button type="button">mile morskie</button>
+        </div>
+        <div id="switch">
+            <button id="calc" type="button" style="display: block" onclick="Hide()">kalkulator</button>
+            <button id="miles" type="button" style="display: none" onclick="Hide()">mile morskie</button>
+        </div>
+        <div id="nautical_mile" style="display: none">
+            <label>Współrzędne pierwszej lokalizacji</label>
+            <input type="number"/>
+            <input type="number"/>
+            <hr>
+            <label>Współrzędne drugiej lokalizacji</label>
+            <input type="number"/>
+            <input type="number"/>
+            <div id="result"></div>
         </div>
     </body>
 </html>
