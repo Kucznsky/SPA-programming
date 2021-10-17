@@ -82,28 +82,12 @@ function Exponentiation()
         document.getElementById("result").innerHTML = "Only numbers allowed!!!";
 }
 
-function Hide()
+function ChangeView()
 {
-    /*var calculator = getElementById("calculator");
-    var miles = getElementById("nautical_mile");
-    var buttonC = getElementById("calc");
-    var buttonM = getElementById("miles");*/
-    if(getElementById("calculator").style.display = "block")
-    {
-        getElementById("calculator").style.display = "none";
-        getElementById("calc").style.display = "none";
-        getElementById("nautical_mile").style.display = "block";
-        getElementById("miles").style.display = "block";
-        /*calculator.style.display = "none";
-        buttonC.style.display = "none";
-        miles.style.display = "block";
-        buttonM.style.display = "block";*/
-    }
-    else
-    {
-        /*calculator.style.display = "block";
-        buttonC.style.display = "block";
-        miles.style.display = "none";
-        buttonM.style.display = "none";*/
-    }
+        $(".calculator").hide();
+        $(".nautical_mile").show();
+    $("#miles").click(function(){
+        $(".nautical_mile").hide();
+        $(".calculator").show();
+    });
 }
