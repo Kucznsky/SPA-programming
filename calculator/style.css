@@ -4,6 +4,31 @@ body
     font-size: 24px;
     color: #ffffff;
 }
+#main
+{
+    margin: auto;
+    width: 60%;
+    border: 3px solid;
+    border-radius: 8px;
+    border-color: #ffffff;
+    padding: 10px;
+}
+#switch
+{
+    float: right;
+}
+.icon
+{
+    font-size: 16px;
+    margin:5px;
+}
+#exp::after
+{
+    size: 32px;
+    font-size: 24px;
+    margin:5px;
+    font-weight: bold;
+}
 .nautical_mile
 {
     display: none;

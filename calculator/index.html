@@ -5,33 +5,36 @@
         <link rel="stylesheet" href="style.css">
         <script src="logic.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
-        <div class="calculator">
-            <input id="first" type="number">
-            <div id="symbol"></div>
-            <input id="second" type="number">
-            <div id="result"></div>
-            <button type="button" onclick="Addition()">+</button>
-            <button type="button" onclick="Subtraction()">-</button>
-            <button type="button" onclick="Multiplication()">*</button>
-            <button type="button" onclick="Division()">/</button>
-            <button type="button" onclick="Exponentiation()">X^</button>
-        </div>
-        <div class="nautical_mile">
-            <label>Współrzędne pierwszej lokalizacji</label>
-            <input type="number" id="x1"/>
-            <input type="number" id="y1"/>
-            <hr>
-            <label>Współrzędne drugiej lokalizacji</label>
-            <input type="number" id="x2"/>
-            <input type="number" id="y2"/>    
-            <div id="distance"></div>
-            <button type="button" onclick="CalculateDistance()">measure</button>
-        </div>
-        <div id="switch">
-            <button id="calc" class="calculator" type="button" onclick="ChangeView()">mile morskie</button>
-            <button id="miles" class="nautical_mile" type="button" onclick="ChangeView()">kalkulator</button>
+        <div id="main">
+            <div id="switch">
+                <button id="calc" class="calculator" type="button" onclick="ChangeView()">measure distance<i class="fas fa-map-marked-alt icon"></i></button>
+                <button id="miles" class="nautical_mile" type="button" onclick="ChangeView()">calculator<i class="fas fa-calculator icon"></i></button>
+            </div>
+            <div class="calculator">
+                <input id="first" type="number">
+                <div id="symbol"></div>
+                <input id="second" type="number">
+                <div id="result"></div>
+                <button type="button" onclick="Addition()"><i class="fas fa-plus icon"></i></button>
+                <button type="button" onclick="Subtraction()"><i class="fas fa-minus icon"></i></button>
+                <button type="button" onclick="Multiplication()"><i class="fas fa-times icon"></i></button>
+                <button type="button" onclick="Division()"><i class="fas fa-divide icon"></i></button>
+                <button type="button" onclick="Exponentiation()" id="exp"><b>X^</b></button>
+            </div>
+            <div class="nautical_mile">
+                <label>Współrzędne pierwszej lokalizacji</label>
+                <input type="number" id="x1"/>
+                <input type="number" id="y1"/>
+                <hr>
+                <label>Współrzędne drugiej lokalizacji</label>
+                <input type="number" id="x2"/>
+                <input type="number" id="y2"/>    
+                <div id="distance"></div>
+                <button id="measure" type="button" onclick="CalculateDistance()">measure <i class="fas fa-ruler-horizontal icon"></i></button>
+            </div>
         </div>
     </body>
 </html>
