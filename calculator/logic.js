@@ -82,15 +82,33 @@ function Exponentiation()
         document.getElementById("result").innerHTML = "Only numbers allowed!!!";
 }
 
-function CalculateDistance()
+//==========================================================================================
+function toRad(Value) 
 {
-    let x = parseInt(document.getElementById("x2").value)-parseInt(document.getElementById("x1").value);
-    let y = parseInt(document.getElementById("y2").value)-parseInt(document.getElementById("y1").value);
-    result= Math.sqrt(x**2+y**2)
-    //result = Math.sqrt(((x2-x1)**2)+((Math.cos((x1*3.14)/180)*(y2-y1))**2))*(40075.704/360);
-    document.getElementById("distance").innerHTML = "distance between both locations (in nautical miles): " + result;
+    return Value * Math.PI / 180
 }
-//========================================================================================
+function toNauticalMiles(Value)
+{
+    return Value * 0.539956803;
+}
+function CalculateDistance() 
+{
+    let x1 = toRad(document.getElementById("x1").value);
+    let x2 = toRad(document.getElementById("x2").value);
+    let y1 = toRad(document.getElementById("y1").value);
+    let y2 = toRad(document.getElementById("y2").value);
+    let R = 6371;
+    var dLat = x2 - x1;
+    var dLon = y2 - y1;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(x1) * Math.cos(x2)
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    var d = R * c
+    document.getElementById("distance").innerHTML = "distance (in nautical miles): " + toNauticalMiles(d);
+}
+//==========================================================================================
+
+//==========================================================================================
 function ChangeView()
 {
         $(".calculator").hide();
