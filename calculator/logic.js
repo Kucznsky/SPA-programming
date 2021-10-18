@@ -82,6 +82,15 @@ function Exponentiation()
         document.getElementById("result").innerHTML = "Only numbers allowed!!!";
 }
 
+function CalculateDistance()
+{
+    let x = parseInt(document.getElementById("x2").value)-parseInt(document.getElementById("x1").value);
+    let y = parseInt(document.getElementById("y2").value)-parseInt(document.getElementById("y1").value);
+    result= Math.sqrt(x**2+y**2)
+    //result = Math.sqrt(((x2-x1)**2)+((Math.cos((x1*3.14)/180)*(y2-y1))**2))*(40075.704/360);
+    document.getElementById("distance").innerHTML = "distance between both locations (in nautical miles): " + result;
+}
+//========================================================================================
 function ChangeView()
 {
         $(".calculator").hide();
