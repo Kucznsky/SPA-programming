@@ -1,17 +1,13 @@
 import React from 'react';
-import reactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-function SomeBasicFunction()
-{
-  return(
-    <div>
-      <Message/>
-    </div>
-  );
-}
-
-const Message = () => {
-  return (<h1>Just done my first component</h1>);
-}
-
-reactDom.render(<SomeBasicFunction/>, document.getElementById('root'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+reportWebVitals();
