@@ -29,3 +29,8 @@
 hr {
   color: #fef9ec;
 }
+h1 {
+  color: #fef9ec;
+  margin-left: 20%;
+  font-style: italic;
+}

@@ -61,13 +61,31 @@ const locations = [
 
 function App() {
   return(
-    <section>
-      {locations.map((location) => {
-        return(
-          <Location key={location.id}{...location}></Location>
-        );
-      })}
-    </section>
+    <article>
+      <section>
+        <h1>Task 2</h1>
+        <PrintDistance></PrintDistance>
+      </section>
+      <section>
+        <h1>Task 1</h1>
+        {locations.map((location) => {
+          return(
+            <Location key={location.id}{...location}></Location>
+          );
+        })}
+      </section>
+    </article>
+  );
+}
+
+const PrintDistance = () =>
+{
+  return( 
+  <div className='location'>
+    <input></input>
+    <input></input>
+    <button>Measure</button>
+  </div>
   );
 }
 
